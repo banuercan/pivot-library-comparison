@@ -1,0 +1,320 @@
+.ag-demo {
+  width: 100%;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff9fc 0%,
+      #fff5f9 100%
+    );
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.ag-demo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.ag-demo-kicker {
+  margin-bottom: 5px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  color: #d889a8;
+}
+
+.ag-demo-title {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #7e5a6a;
+}
+
+.ag-demo-description {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #ad8798;
+}
+
+.ag-engine-badge {
+  padding: 7px 12px;
+
+  border:
+    1px solid #f3d7e3;
+
+  border-radius: 999px;
+
+  background: #fff6fa;
+
+  color: #b97894;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   TOOLBAR
+================================ */
+
+.ag-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 12px;
+}
+
+.ag-search-wrapper {
+  display: flex;
+  align-items: center;
+
+  width: min(
+    460px,
+    100%
+  );
+
+  height: 40px;
+
+  padding: 0 12px;
+
+  border:
+    1px solid #f3dce6;
+
+  border-radius: 10px;
+
+  background: #fffafd;
+}
+
+.ag-search-wrapper:focus-within {
+  border-color: #e9bcd0;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      233,
+      188,
+      208,
+      0.15
+    );
+}
+
+.ag-search-icon {
+  margin-right: 8px;
+
+  color: #c996ad;
+
+  font-size: 18px;
+}
+
+.ag-search {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #715e67;
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.ag-search::placeholder {
+  color: #c7a6b5;
+}
+
+.ag-row-count {
+  padding: 6px 10px;
+
+  border-radius: 8px;
+
+  background: #fff3f8;
+
+  color: #a9788d;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   GRID
+================================ */
+
+.ag-grid-container {
+  width: 100%;
+  height: 650px;
+
+  overflow: hidden;
+
+  border:
+    1px solid #f4dfe8;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 12px
+    rgba(
+      190,
+      130,
+      155,
+      0.06
+    );
+}
+
+
+/* AG GRID THEME OVERRIDES */
+
+.ag-theme-quartz {
+  --ag-font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  --ag-font-size:
+    12px;
+
+  --ag-background-color:
+    #fffafd;
+
+  --ag-foreground-color:
+    #715e67;
+
+  --ag-header-background-color:
+    #fdebf4;
+
+  --ag-header-foreground-color:
+    #7e5a6a;
+
+  --ag-odd-row-background-color:
+    #fff3f8;
+
+  --ag-row-hover-color:
+    #fcebf3;
+
+  --ag-border-color:
+    #f3dce6;
+
+  --ag-row-border-color:
+    #f8e9f0;
+
+  --ag-selected-row-background-color:
+    #f9dfeb;
+
+  --ag-input-focus-border-color:
+    #e9bcd0;
+
+  --ag-range-selection-border-color:
+    #d889a8;
+
+  --ag-header-column-separator-color:
+    #f1d7e3;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 760px) {
+  .ag-demo-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .ag-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ag-search-wrapper {
+    width: 100%;
+  }
+}
+/* ================================
+   VIEW SWITCHER
+================================ */
+
+.ag-view-switcher {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  width: fit-content;
+
+  margin-bottom: 14px;
+
+  padding: 4px;
+
+  border: 1px solid #f3dce6;
+  border-radius: 10px;
+
+  background: #fffafd;
+}
+
+.ag-view-btn {
+  padding: 7px 14px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #a0788b;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.ag-view-btn:hover {
+  background: #fff3f8;
+
+  color: #a85d7d;
+}
+
+.ag-view-btn.active {
+  background: #fdebf4;
+
+  color: #9f5073;
+
+  box-shadow:
+    0 1px 3px
+    rgba(190, 130, 155, 0.08);
+}

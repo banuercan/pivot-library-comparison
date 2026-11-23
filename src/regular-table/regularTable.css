@@ -1,0 +1,370 @@
+.regular-demo {
+  width: 100%;
+
+  padding:
+    20px
+    16px
+    16px;
+
+  border-radius:
+    14px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff9fc 0%,
+      #fff5f9 100%
+    );
+
+  color:
+    #715e67;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.regular-demo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+
+.regular-demo-kicker {
+  margin-bottom: 5px;
+
+  color:
+    #d889a8;
+
+  font-size:
+    11px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.regular-demo-title {
+  margin: 0;
+
+  color:
+    #7e5a6a;
+
+  font-size:
+    24px;
+
+  font-weight:
+    700;
+}
+
+
+.regular-demo-description {
+  margin:
+    5px
+    0
+    0;
+
+  color:
+    #ad8798;
+
+  font-size:
+    13px;
+}
+
+
+.regular-engine-badge {
+  flex-shrink: 0;
+
+  padding:
+    7px
+    12px;
+
+  border:
+    1px solid #f3d7e3;
+
+  border-radius:
+    999px;
+
+  background:
+    #fff6fa;
+
+  color:
+    #b97894;
+
+  font-size:
+    12px;
+
+  font-weight:
+    600;
+}
+
+
+/* ===============================
+   TOOLBAR
+================================ */
+
+.regular-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 12px;
+}
+
+
+/* ===============================
+   SEARCH
+================================ */
+
+.regular-search-wrapper {
+  display: flex;
+  align-items: center;
+
+  width:
+    min(
+      460px,
+      100%
+    );
+
+  height:
+    40px;
+
+  padding:
+    0
+    12px;
+
+  border:
+    1px solid #f3dce6;
+
+  border-radius:
+    10px;
+
+  background:
+    #fffafd;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+.regular-search-wrapper:focus-within {
+  border-color:
+    #e9bcd0;
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      233,
+      188,
+      208,
+      0.15
+    );
+}
+
+
+.regular-search-icon {
+  margin-right:
+    8px;
+
+  color:
+    #c996ad;
+
+  font-size:
+    18px;
+}
+
+
+.regular-search {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background:
+    transparent;
+
+  color:
+    #715e67;
+
+  font-family:
+    inherit;
+
+  font-size:
+    13px;
+}
+
+
+.regular-search::placeholder {
+  color:
+    #c7a6b5;
+}
+
+
+/* ===============================
+   ROW COUNT
+================================ */
+
+.regular-row-count {
+  padding:
+    6px
+    10px;
+
+  border-radius:
+    8px;
+
+  background:
+    #fff3f8;
+
+  color:
+    #a9788d;
+
+  font-size:
+    12px;
+
+  font-weight:
+    600;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ===============================
+   TABLE CARD
+================================ */
+
+.regular-table-card {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border:
+    1px solid #f4dfe8;
+
+  border-radius:
+    12px;
+
+  background:
+    #fffafd;
+
+  box-shadow:
+    0
+    4px
+    12px
+    rgba(
+      190,
+      130,
+      155,
+      0.06
+    );
+}
+
+
+/* ===============================
+   REGULAR TABLE
+================================ */
+
+.regular-table-demo {
+  display: block;
+
+  width: 100%;
+  height: 650px;
+
+  overflow: auto;
+
+  background:
+    #fffafd;
+
+  scroll-margin-top:
+    72px;
+
+  /*
+    regular-table kendi scroll alanını
+    yönetsin. Ana sticky menüyle
+    header'ın üst üste binmesini azaltır.
+  */
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* ===============================
+   REGULAR TABLE HEADER LAYER
+================================ */
+
+.regular-table-demo thead {
+  position: relative;
+
+  z-index: 5;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 760px) {
+
+  .regular-demo {
+    padding:
+      16px
+      10px;
+  }
+
+
+  .regular-demo-header {
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+    gap:
+      12px;
+  }
+
+
+  .regular-toolbar {
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+  }
+
+
+  .regular-search-wrapper {
+    width:
+      100%;
+  }
+
+
+  .regular-row-count {
+    width:
+      fit-content;
+  }
+
+}
